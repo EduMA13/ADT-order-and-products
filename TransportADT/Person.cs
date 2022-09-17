@@ -14,6 +14,6 @@ namespace TransportADT
         public int Age {get; set;}  
         public string gender {get; set;}    
         public int CarsOwn { get; set;}
-        public int MotosOwn { get; set; }
+        public bool susFraud { get; set;}
     }
 }

@@ -20,18 +20,23 @@ namespace TransportADT
             P1.Age = 19;
             P1.gender = "M";
             P1.CarsOwn = 0;
-            P1.MotosOwn = 3;
+            P1.susFraud = false;
 
             V1.Vtype = "SUV";
-            V1.description = "bLABLA";
+            V1.description = "8-passenger SUV ";
             V1.brand = "Ford";
             V1.year = 2019;
             V1.color = "Red";
             V1.wheels = 4;
 
             L1.Type = "Car";
+            L1.InitialD = "17/9/2018";
+            L1.ExpirationtD = "24/12/2022";
 
-            L1.addInfo(P1);
+            L1.checkAge(P1);
+            L1.checkSus(P1);
+            L1.checkCar(P1,V1);
+
 
         }
     }
