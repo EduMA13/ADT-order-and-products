@@ -12,7 +12,7 @@ namespace TransportADT
         public int year { get; set; }
         public string brand { get; set; }
         public string description   { get; set; }
-        public string wheels { get; set; }
+        public int wheels { get; set; }
         public string color { get; set; }
 
     }

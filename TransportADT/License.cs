@@ -13,8 +13,30 @@ namespace TransportADT
         public bool Status { get;set;}
         public string Type { get;set;}
 
+        public List<Person> persons;
+
+        public License() { 
+        
+        this.persons = new List<Person>();
+           
+        }
+
+        public void addInfo(Person person) {
+
+            if (person.Age > 90) { 
             
+    
+            
+            }
+        
+        
+        
+        }
 
 
     }
-}
+
+
+
+    }
+
