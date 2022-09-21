@@ -10,33 +10,37 @@ namespace TransportADT
     {
         static void Main(string[] args)
         {
-            Person P1 = new Person();
-            Vehicle V1 = new Vehicle();
-            License L1 = new License();
+        Register register = new Register();
+        Person Fperson = new Person(1234, "Sobastian", "Ramirez", 19, "M",false);
+        Vehicle Fvehicle = new Vehicle("Car", 2018, "Ford", "Very fast car", 4, "Purple");
+            //Vehicle svehicle = new Vehicle("Car", 2018, "Nissan", "0-100 speed in 10 seconds", 4, "Red");
+            //Vehicle tvehicle = new Vehicle("Car", 2018, "Toyota", "Electric car with a 500 km range", 4, "Black");
+            //Vehicle rvehicle = new Vehicle("Car", 2018, "Peugot", "Sports car", 4, "Purple");
+            //Vehicle zvehicle = new Vehicle("Car", 2018, "us", "Description", 4, "Blue");
+            //Vehicle xvehicle = new Vehicle("Car", 2018, "ssss", "Description", 4, "Brown");
+            //Vehicle qvehicle = new Vehicle("Car", 2018, "asdasd", "Description", 4, "Yellow");
+        License license = new License(new DateTime (18 / 06 / 2015), new DateTime(18 / 06 / 2019), true, "Car");
+       // License dlicense = new License(new DateTime(18 / 06 / 2015), new DateTime(21 /  09/ 2022), true, "Car");
 
-            P1.Name = "Juan";
-            P1.SurName = "Vasquez";
-            P1.ID = 1234;
-            P1.Age = 19;
-            P1.gender = "M";
-            P1.CarsOwn = 0;
-            P1.susFraud = false;
+            Fperson.checkData();
+            Fperson.addCar(Fvehicle);
+            //Fperson.Addlicense(license)
+            //Fperson.addCar(svehicle);
+            //Fperson.addCar(tvehicle);
+            //Fperson.addCar(rvehicle);
+            //Fperson.addCar(zvehicle);
+            //Fperson.addCar(xvehicle);
+            //Fperson.addCar(qvehicle);
+            Fperson.cancelCar(license, Fvehicle);
+           
+            Console.WriteLine( "Number of licenses added: "+Fperson.Licenses.Count);
+            Console.WriteLine("Number of vehicles added:"+Fperson.Vehicles.Count);
+            Fperson.checkSus();
 
-            V1.Vtype = "SUV";
-            V1.description = "8-passenger SUV ";
-            V1.brand = "Ford";
-            V1.year = 2019;
-            V1.color = "Red";
-            V1.wheels = 4;
 
-            L1.Type = "Car";
-            L1.InitialD = "17/9/2018";
-            L1.ExpirationtD = "24/12/2022";
+            Console.ReadLine();
 
-            L1.checkAge(P1);
-            L1.checkSus(P1);
-            L1.checkCar(P1,V1);
-
+      
 
         }
     }

@@ -15,5 +15,14 @@ namespace TransportADT
         public int wheels { get; set; }
         public string color { get; set; }
 
+        public Vehicle(string vtype, int year, string brand, string description, int wheels, string color)
+        {
+            Vtype = vtype;
+            this.year = year;
+            this.brand = brand;
+            this.description = description;
+            this.wheels = wheels;
+            this.color = color;
+        }
     }
 }
