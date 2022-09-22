@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TransportADT
 {
@@ -57,9 +52,8 @@ namespace TransportADT
                     if (licenses.Type == Licenses[i].Type)
                     {
 
-                        DateTime e = (Licenses[i].ExpirationtD);
-                        DateTime n = (DateTime.Now);
-                        if (e == n)
+                        int value = DateTime.Compare(licenses.ExpirationtD, DateTime.Now);
+                        if (value > 0)
                         {
                             Licenses.RemoveAt(i);
                             Licenses.Add(licenses);
@@ -91,32 +85,6 @@ namespace TransportADT
             }
         }
 
-
-
-
-
-        //public void cancelCar(License licenses, Vehicle vehicle)
-        //{
-        //    if (Vehicles.Count > 0)
-        //    {
-
-        //        for (int i = 0; i < Licenses.Count; i++)
-        //        {
-
-        //            if (vehicle.Vtype == Licenses[i].Type)
-        //            {
-        //                Vehicles.Remove(vehicle);
-
-
-        //            }
-        //            else
-
-        //                return;
-        //        }
-
-
-        //    }
-        //}
         public void checkSus()
         {
 

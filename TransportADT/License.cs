@@ -14,7 +14,6 @@ namespace TransportADT
         public bool Status { get; set; }
         public string Type { get; set; }
         public Person person { get; set; }
-        public int ID => person.ID;
 
         public License(DateTime initialD, DateTime expirationtD, bool status, string type)
         {

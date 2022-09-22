@@ -11,7 +11,7 @@ namespace TransportADT
         static void Main(string[] args)
         {
         Register register = new Register();
-        Person Fperson = new Person(1234, "Sobastian", "Ramirez", 19, "M",false);
+        Person Fperson = new Person(1234, "Sobastian", "Ramirez", 91, "M",false);
         Vehicle Fvehicle = new Vehicle("Car", 2018, "Ford", "Very fast car", 4, "Purple");
             //Vehicle svehicle = new Vehicle("Car", 2018, "Nissan", "0-100 speed in 10 seconds", 4, "Red");
             //Vehicle tvehicle = new Vehicle("Car", 2018, "Toyota", "Electric car with a 500 km range", 4, "Black");
@@ -20,11 +20,12 @@ namespace TransportADT
             //Vehicle xvehicle = new Vehicle("Car", 2018, "ssss", "Description", 4, "Brown");
             //Vehicle qvehicle = new Vehicle("Car", 2018, "asdasd", "Description", 4, "Yellow");
         License license = new License(new DateTime (18 / 06 / 2015), new DateTime(18 / 06 / 2019), true, "Car");
-       // License dlicense = new License(new DateTime(18 / 06 / 2015), new DateTime(21 /  09/ 2022), true, "Car");
+        License dlicense = new License(new DateTime(18 / 06 / 2015), new DateTime(21 /  09/ 2022), true, "Car");
 
             Fperson.checkData();
             Fperson.addCar(Fvehicle);
-            //Fperson.Addlicense(license)
+            Fperson.Addlicense(license);
+            Fperson.Addlicense(dlicense);
             //Fperson.addCar(svehicle);
             //Fperson.addCar(tvehicle);
             //Fperson.addCar(rvehicle);
